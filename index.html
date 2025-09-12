@@ -63,7 +63,7 @@
               onsubmit="return validate();"
             >
               <div
-                class="formData">
+                class="formData" id="formDataFirst">
                 <label for="first">Prénom</label><br>
                 <input
                   class="text-control"
@@ -74,7 +74,7 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData" id="formDataLast">
                 <label for="last">Nom</label><br>
                 <input
                   class="text-control"
@@ -84,7 +84,7 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData" id="formDataMail">
                 <label for="email">E-mail</label><br>
                 <input
                   class="text-control"
@@ -94,7 +94,7 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData" id="formDataBirthDate">
                 <label for="birthdate">Date de naissance</label><br>
                 <input
                   class="text-control"
@@ -104,13 +104,13 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData" id="formDataQuantity">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
-                class="formData">
+                class="formData" id="formDataRadios">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -180,13 +180,12 @@
               </div>
 
               <div
-                class="formData">
+                class="formData" id="formDataCheckboxs">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
                   checked
-                  required
                 />
                 <label class="checkbox2-label" for="checkbox1" >
                   <span class="checkbox-icon"></span>
@@ -202,6 +201,7 @@
               </div>
               <input
                 class="btn-submit"
+                id = "btn-submit"
                 type="submit"
                 class="button"
                 value="C'est parti"
