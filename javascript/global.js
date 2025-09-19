@@ -1,18 +1,7 @@
-function editNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-const closeBtn = document.getElementById("close-button");
-const submitBtn = document.getElementById("btn-submit");
+
 const firstNameInput = document.getElementById("first");
 const lastNameInput = document.getElementById("last");
 const mailInput = document.getElementById("email");
@@ -21,22 +10,6 @@ const radiosInputs = document.getElementsByName("location");
 const checkboxInput = document.getElementById("checkbox1");
 const dateInput = document.getElementById("birthdate");
 
-// launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
-// Close modal event
-closeBtn.addEventListener("click", CloseModal);
-
-
-// launch modal form
-function launchModal() {
-    modalbg.style.display = "block";
-}
-
-//Close modal form
-function CloseModal() {
-    modalbg.style.display = "none";
-}
 
 // Block modal validation
 function validate() {
@@ -77,7 +50,7 @@ function validate() {
         console.log("false")
         return false
     } else {
-        console.log("validé")
+        alert("Merci ! Votre réservation a été reçue.")
         return true
     }
 }
