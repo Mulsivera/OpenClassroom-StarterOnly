@@ -17,4 +17,13 @@ function ModalDisplay(display) {
     // Retrieve the modal and manage its display
     const modalbg = document.querySelector(".bground");
     modalbg.style.display = display;
+    ModalContentDisplay("modal-form", "modal-thanks");
+}
+
+function ModalContentDisplay(showClass, hideClass) {
+    // Switch between form and thanks visibility
+    const showElement = document.querySelector("." + showClass);
+    const hideElement = document.querySelector("." + hideClass);
+    showElement.style.display = "block";
+    hideElement.style.display = "none";
 }

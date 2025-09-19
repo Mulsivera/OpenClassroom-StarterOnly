@@ -29,7 +29,10 @@ function sendform(event) {
         console.log("Form not sent because one of input is wrong");
         return;
     }
-    console.log("Form sent");
+    event.preventDefault();
+    ModalContentDisplay("modal-thanks", "modal-form");
+    const closeButton = document.querySelector("#close-button");
+    closeButton.addEventListener("click", () => ModalDisplay("none"));
 }
 
 function resetform(inputDivIDList) {
