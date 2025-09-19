@@ -9,7 +9,8 @@ function initEvents () {
     const form = document.querySelector("#form");
     form.addEventListener("submit", sendform);
     // Form Reset on closing
-    const closeButton = document.querySelector("#close-icon");
+    const closeIcon = document.querySelector("#close-icon");
+    const closeButton = document.querySelector("#close-button");
     const inputDivIDList = [
     "formDataFirst",
     "formDataLast",
@@ -19,6 +20,7 @@ function initEvents () {
     "formDataRadios",
     "formDataCheckboxs"
     ];
+    closeIcon.addEventListener("click", () => resetform(inputDivIDList));
     closeButton.addEventListener("click", () => resetform(inputDivIDList));
 }
 
